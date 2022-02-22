@@ -6,3 +6,8 @@
 
 TODO: add readme
 
+Plans:
+ - Convert to table form & add columns to each link: counter, checkbox, note, date clicked?
+ - When link is clicked, check it automatically/increase counter
+ - Shuffle only selected
+ - Import/export
