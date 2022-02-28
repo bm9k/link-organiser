@@ -56,7 +56,7 @@ export default function App() {
       <textarea
         rows="10"
         style={{ width: "100%" }}
-        onChange={(e) => setLines(e.target.value)}
+        onChange={(e) => setLines(e.target.value) && setOutput(1)}
         value={lines}
       ></textarea>
     </div>
