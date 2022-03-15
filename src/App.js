@@ -53,7 +53,7 @@ export default function App() {
           const text = anon ? `link ${i + 1}` : link
           return (
             <li key={link}>
-              <a href={link}>{text}</a>
+              <a href={link} target="_external">{text}</a>
             </li>
           );
         })}
