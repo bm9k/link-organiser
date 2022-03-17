@@ -1,0 +1,65 @@
+:root {
+  --main-color: #55acee;
+}
+
+.button-group {
+  margin: 1rem 0;
+}
+
+.button-group>* {
+  margin-right: 1rem;
+}
+
+.button-group>*:first-child {
+  /* margin-left: 1rem; */
+}
+
+button.button {
+  background-color: var(--main-color);
+  border-color: var(--main-color);
+  text-transform: none;
+  font-weight: 600;
+}
+
+button.button:active {
+  background-color: var(--main-color);
+  border-color: var(--main-color);
+  filter: brightness(0.85);
+}
+
+button.button:hover {
+  background-color: var(--main-color);
+  border-color: var(--main-color);
+  filter: brightness(0.95)
+}
+
+button.button.button-outline {
+  color: var(--main-color);
+}
+
+button.button.button-outline:hover {
+  color: var(--main-color);
+  border-color: var(--main-color);
+  filter: brightness(0.9)
+}
+
+textarea {
+  height: auto;
+}
+
+textarea:active,
+textarea:focus {
+  border-color: var(--main-color);
+}
+
+a {
+  color: var(--main-color)
+}
+
+ol {
+  padding-left: 1rem;
+}
+
+li {
+  margin-bottom: auto;
+}

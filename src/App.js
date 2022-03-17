@@ -1,6 +1,7 @@
-import "./App.css";
-
 import { useState } from "react";
+
+import "milligram";
+import "./App.css";
 
 function useLocalStorage(key, initialValue) {
   const [value, setStateValue] = useState(() => {
@@ -18,7 +19,7 @@ function useLocalStorage(key, initialValue) {
 
 function fisherYates(array, rng) {
   if (!rng) {
-    rng = Math.random
+    rng = Math.random;
   }
   var count = array.length,
     randomnumber,
@@ -88,51 +89,90 @@ export default function App() {
   const intSeed = seed === 1 ? null : (seed * (2 << 29)) | 0;
 
   if (seed !== 1) {
-    const rng = createRng(intSeed)
+    const rng = createRng(intSeed);
     fisherYates(links, rng);
   }
 
   return (
     <div className="App">
-      <div className="actions">
-        <button onClick={() => setSeed(Math.random())}>Shuffle</button>
-        <button onClick={() => setSeed(1)}>Reset</button>
+      <div className="container">
+        <div className="row">
+          <div className="button-group">
+            <button className="button" onClick={() => setSeed(Math.random())}>
+              Shuffle
+            </button>
+            <button
+              className="button button-outline"
+              onClick={() => setSeed(1)}
+            >
+              Reset
+            </button>
+            <span>
+              <input
+                type="checkbox"
+                checked={anon}
+                onChange={(e) => setAnon(e.target.checked)}
+              />
+              <label className="label-inline">Anonymous</label>
+            </span>
+            <span>
+              <input
+                type="checkbox"
+                checked={unique}
+                onChange={(e) => setUnique(e.target.checked)}
+              />
+              <label className="label-inline">Unique</label>
+            </span>
+          </div>
+        </div>
+        <div className="row">
+          <div className="column">
+            <h3>Output</h3>
+            {links.length === 0 ? (
+              <p>
+                <em>add some links to get started</em>
+              </p>
+            ) : (
+              <ol>
+                {links.map((link, i) => {
+                  const text = anon ? `link ${i + 1}` : link;
+                  return (
+                    <li key={`${i},${link}`}>
+                      <a href={link} target="_external">
+                        {text}
+                      </a>
+                    </li>
+                  );
+                })}
+              </ol>
+            )}
+          </div>
+        </div>
+        <div className="row">
+          <div className="column">
+            <h3>Input</h3>
+            <textarea
+              rows="10"
+              style={{ width: "100%" }}
+              onChange={(e) => setLines(e.target.value) && setSeed(1)}
+              value={lines}
+              placeholder="one link per line..."
+            ></textarea>
+          </div>
+        </div>
+        <div className="row">
+          <div className="column">
+            <p>
+              <em>
+                Seed: {seed},{intSeed}
+              </em>
+            </p>
+            <p>
+              By <a href="https://github.com/bm9k">Ben Martin</a>
+            </p>
+          </div>
+        </div>
       </div>
-      <div>
-        Anonymous:{" "}
-        <input
-          type="checkbox"
-          checked={anon}
-          onChange={(e) => setAnon(e.target.checked)}
-        />
-      </div>
-      <div>
-        Unique:{" "}
-        <input
-          type="checkbox"
-          checked={unique}
-          onChange={(e) => setUnique(e.target.checked)}
-        />
-      </div>
-      <ol>
-        {links.map((link, i) => {
-          const text = anon ? `link ${i + 1}` : link;
-          return (
-            <li key={`${i},${link}`}>
-              <a href={link} target="_external">
-                {text}
-              </a>
-            </li>
-          );
-        })}
-      </ol>
-      <textarea
-        rows="10"
-        style={{ width: "100%" }}
-        onChange={(e) => setLines(e.target.value) && setSeed(1)}
-        value={lines}
-      ></textarea>
-      <p>Seed: {seed},{intSeed}</p>
     </div>
   );
 }
