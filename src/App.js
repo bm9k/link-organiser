@@ -166,14 +166,10 @@ export default function App() {
           <div className="column">
             <footer>
               <p>
-                <em>
-                  Seed: 0 {"≤"} {intSeed} {"<"} 2<sup>29</sup>
-                </em>
+                Seed: 0 {"≤"} {intSeed} {"<"} 2<sup>29</sup>
               </p>
               <p>
-                <em>
-                  By <a href="https://github.com/bm9k">Ben Martin</a>
-                </em>
+                By <a href="https://github.com/bm9k">Ben Martin</a>
               </p>
               <p>
                 <a href="https://github.com/bm9k/link-organiser">
@@ -182,6 +178,9 @@ export default function App() {
               </p>
             </footer>
           </div>
+        </div>
+        <div className="row" id="icon">
+          <div className="column">🐺</div>
         </div>
       </div>
       <GitHubCorners
