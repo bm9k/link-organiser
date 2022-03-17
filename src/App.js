@@ -162,14 +162,15 @@ export default function App() {
         </div>
         <div className="row">
           <div className="column">
-            <p>
+            <footer>
               <em>
-                Seed: {seed},{intSeed}
+                Seed: 0 {"≤"} {intSeed} {"<"} 2<sup>29</sup>
               </em>
-            </p>
-            <p>
-              By <a href="https://github.com/bm9k">Ben Martin</a>
-            </p>
+              <em className="divider">|</em>
+              <em>
+                By <a href="https://github.com/bm9k">Ben Martin</a>
+              </em>
+            </footer>
           </div>
         </div>
       </div>

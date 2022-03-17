@@ -63,3 +63,12 @@ ol {
 li {
   margin-bottom: auto;
 }
+
+footer {
+  text-align: center;
+  margin: 4rem 0 2rem;
+}
+
+footer>* {
+  margin: 2rem;
+}
