@@ -11,3 +11,4 @@ Plans:
  - When link is clicked, check it automatically/increase counter
  - Shuffle only selected
  - Import/export
+ - Preserve order of shuffling across page loads (store random seed in localstorage)
