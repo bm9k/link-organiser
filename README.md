@@ -12,3 +12,4 @@ Plans:
  - Shuffle only selected
  - Import/export
  - Preserve order of shuffling across page loads (store random seed in localstorage)
+ - Preserve settings across page loads
