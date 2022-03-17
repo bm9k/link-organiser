@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import GitHubCorners from "@uiw/react-github-corners";
+
 import "milligram";
 import "./App.css";
 
@@ -163,17 +165,30 @@ export default function App() {
         <div className="row">
           <div className="column">
             <footer>
-              <em>
-                Seed: 0 {"≤"} {intSeed} {"<"} 2<sup>29</sup>
-              </em>
-              <em className="divider">|</em>
-              <em>
-                By <a href="https://github.com/bm9k">Ben Martin</a>
-              </em>
+              <p>
+                <em>
+                  Seed: 0 {"≤"} {intSeed} {"<"} 2<sup>29</sup>
+                </em>
+              </p>
+              <p>
+                <em>
+                  By <a href="https://github.com/bm9k">Ben Martin</a>
+                </em>
+              </p>
+              <p>
+                <a href="https://github.com/bm9k/link-organiser">
+                  Source on Github
+                </a>
+              </p>
             </footer>
           </div>
         </div>
       </div>
+      <GitHubCorners
+        position="right"
+        href="https://github.com/uiwjs/react-github-corners"
+        bgColor="rgb(85, 172, 238)"
+      />
     </div>
   );
 }

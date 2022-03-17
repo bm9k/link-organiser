@@ -70,5 +70,11 @@ footer {
 }
 
 footer>* {
-  margin: 2rem;
+  display: inline;
+}
+
+footer>*:not(:first-child) {
+  margin-left: 3rem;
+  padding-left: 3rem;
+  border-left: 1px solid hsl(207.3, 10.3%, 80%);
 }
