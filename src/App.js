@@ -52,7 +52,7 @@ export default function App() {
         {links.map((link, i) => {
           const text = anon ? `link ${i + 1}` : link
           return (
-            <li key={link}>
+            <li key={`${i},${link}`}>
               <a href={link} target="_external">{text}</a>
             </li>
           );
