@@ -185,7 +185,7 @@ export default function App() {
       </div>
       <GitHubCorners
         position="right"
-        href="https://github.com/uiwjs/react-github-corners"
+        href="https://github.com/bm9k/link-organiser"
         bgColor="rgb(85, 172, 238)"
       />
     </div>
