@@ -11,6 +11,7 @@ Plans:
  - When link is clicked, check it automatically/increase counter
  - Shuffle only selected
  - Import/export
+ - Responsive layout/mobile (basic)
 
 
 ## Appendix
