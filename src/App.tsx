@@ -1,10 +1,14 @@
+// @ts-nocheck
+// TODO: remove ^^ (WIP)
+
 import { useState } from "react";
 
-import GitHubCorners from "@uiw/react-github-corners";
+import GitHubCorners from "@uiw/react-github-corners/src/index.tsx";
 
 import "milligram";
 import "./App.css";
 
+// TODO: move to config?
 const SOURCE_LINK = "https://github.com/bm9k/";
 const AUTHOR_LINK = "https://bm9k.github.io/link-organiser/";
 

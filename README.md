@@ -4,7 +4,9 @@
 
 🐕
 
-TODO: add readme
+TODO:
+- [ ] Add readme
+- [ ] Fix typescript errors (remove ts-nocheck)
 
 Plans:
  - Convert to table form & add columns to each link: counter, checkbox, note, date clicked?
