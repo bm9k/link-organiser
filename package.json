@@ -8,10 +8,10 @@
   "homepage": "https://bm9k.github.io/link-organiser",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --base \"/\"",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "deploy": "npm run build && gh-pages -d dist"
+    "deploy": "tsc && vite build && gh-pages -d dist"
   },
   "dependencies": {
     "@uiw/react-github-corners": "^1.5.14",
